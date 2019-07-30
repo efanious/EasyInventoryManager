@@ -8,6 +8,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -30,16 +31,15 @@ public class MainActivity extends AppCompatActivity implements
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
             FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction transaction = fragmentManager.beginTransaction();
 
             switch (item.getItemId()) {
                 case R.id.navigation_inventory:
-                    fragmentManager.beginTransaction()
-                            .replace(R.id.fragment_container, mInventoryFragment)
+                    transaction.replace(R.id.fragment_container, mInventoryFragment)
                             .commit();
                     return true;
                 case R.id.navigation_sellers:
-                    fragmentManager.beginTransaction()
-                            .replace(R.id.fragment_container, mSellersFragment)
+                    transaction.replace(R.id.fragment_container, mSellersFragment)
                             .commit();
                     return true;
             }
