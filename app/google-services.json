@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "165895668637",
+    "firebase_url": "https://easy-inventory-manager.firebaseio.com",
+    "project_id": "easy-inventory-manager",
+    "storage_bucket": "easy-inventory-manager.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165895668637:android:81ea1f47133e3045",
+        "android_client_info": {
+          "package_name": "efana.easyinventorymanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165895668637-dnihji9rkp13hfkm5rs85kj0m67nnosp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "efana.easyinventorymanager",
+            "certificate_hash": "e0560264e893035648d35f99e8b858539acbc941"
+          }
+        },
+        {
+          "client_id": "165895668637-bsgog5p7hhe3k5utmp7m317eslpfu23t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCk7f6h31QPP1vZma34e-ogic_ASG4rdhA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165895668637-bsgog5p7hhe3k5utmp7m317eslpfu23t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
