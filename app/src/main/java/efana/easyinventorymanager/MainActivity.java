@@ -1,5 +1,6 @@
 package efana.easyinventorymanager;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -10,9 +11,11 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import efana.easyinventorymanager.activities.AddProductActivity;
 import efana.easyinventorymanager.fragments.InventoryFragment;
 import efana.easyinventorymanager.fragments.SellersFragment;
 
@@ -59,6 +62,8 @@ public class MainActivity extends AppCompatActivity implements
 
         FragmentManager fragmentManager = getSupportFragmentManager();
 
+
+
         fragmentManager.beginTransaction()
                 .add(R.id.fragment_container, mInventoryFragment)
                 .commit();
@@ -70,5 +75,24 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public void onFragmentInteraction(Uri uri) {
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_add_product) {
+            Intent intent = new Intent(this, AddProductActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
